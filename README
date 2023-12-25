@@ -1,0 +1,75 @@
+	
+	1. Clone this package from GitHub repository by using below URL:
+	
+	2. Open the Spring Tool Suite 4 IDE
+		
+		a. Go to File and select open project from File system
+		b. Select Directory where you cloned this package
+		c. Click on finish. It will take few minutes to load the package with all dependencies.
+		d. Go to help menu and click install new software and add below url and select lombok    
+				https://projectlombok.org/p2
+		e. Click on finish.
+	
+	3. After loaded all dependencies expand the resources folder 
+	
+		a. Open the application.properties file for configure database connection
+		b. Replace database name, username, and password based on your local system.
+		c. Open pom.xml file to verify MySQL version. If this version not suit please use different version.
+		 
+	4. Once you setup. Open the main file under src/main/java package(com.backend.demo) -> BackendAppApplication.java file.
+		a. Right click over to file
+		b. Select RunAs and select Spring Boot App
+	
+	This will run complete application.
+
+
+
+
+	-------------API's---------------
+	
+	I Added video session to understand how API's is working with POSTMAN.
+	
+	POST API: Create single records
+	
+	urL: http://localhost:8080/api/saverec
+	Request Body:
+	
+	{
+	    "name":"GT Plan",
+	    "description":"describe about the plan and location",
+	    "location":"CHE",
+	    "isActive":true
+	}
+	
+	------------------------------
+	
+	GET API: get a single record
+	
+	url: http://localhost:8080/api/getOneRec/1
+	
+	------------------------------
+	
+	POST API: Create multiple records using ArrayList
+	
+	url: http://localhost:8080/api/saveAllRec
+	
+	Request Body:
+	
+	[
+	    {
+	        "name": "Covai Trads",
+	        "description": "test desc 1",
+	        "location": "Coimbatore",
+	        "isActive": true
+	    },
+	    {
+	        "name": "Git Pack",
+	        "description": "test desc 2",
+	        "location": "HYD",
+	        "isActive": false
+	    }
+	]
+
+
+
+	
